@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML 문법정리</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>
+      기본 문법
+    </h1>
+    <h2>
+      태그(Tag)
+    </h2>
+    <p>
+      HTML에서 태그는 꺾쇠(&lt; 기호랑 &gt; 기호)를 사용하는 문법입니다.<br>
+      일반적으로 시작 태그와 종료 태그로 내용을 감싸는데요, 
+      시작 태그는 &lt;태그 이름&gt; 형태로 쓰고 종료 태그는 &lt;/태그 이름&gt; 형태로 씁니다.
+    </p>
+    <h3>
+      예시 1: &lt;p&gt; 태그
+    </h3>
+    <p>
+      &lt;p&gt;
+        단락은 이렇게 넣습니다.
+      &lt;p&gt;
+    </p>
+    <h3>
+      예시 2: &lt;img&gt; 태그
+    </h3>
+    <p>
+      &lt;img src="https://example.com/my-image.png"&gt;    
+    </p>
+    <h2>
+      속성
+    </h2>
+    <p>
+      시작 태그에 속성 이름="속성 값" 형태로 사용하는 문법입니다. 
+      태그의 속성을 정합니다.
+    </p>
+    <h3>
+      예시 1: &lt;a&gt; 태그의 href 속성
+    </h3>
+    <p>
+      &lt;a href="https://codeit.kr"&gt;코드잇&lt;/a&gt;
+        단락은 이렇게 넣습니다.
+    </p>
+    <h3>
+      예시 2: &lt;img&gt; 태그의 src속성
+    </h3>
+    <p>
+      &lt;img src="https://example.com/my-image.png"&gt;    
+    </p>
+    <h2>
+      HTML 파일의 기본 구조
+    </h2>
+    <p>
+      맨 윗줄에는 이 파일이 HTML 문법을 쓴다는 걸 알려주는 코드가 들어갑니다.<br>
+      &lt;!DOCTYPE html&gt; 인데요. 여기서 DOCTYPE 은 문서 타입(Document Type)이라는 뜻입니다.<br>
+      그 아래로는 크게 &lt;html&gt; 태그로 감싼 다음에, &lt;head&gt; 태그와 &lt;body&gt; 태그로 나눕니다.<br>
+      이때 &lt;head&gt; 태그 안에는 페이지에 대한 정보가 들어가고, &lt;body&gt;에는 페이지 내용이 들어갑니다.
+    </p>
+    <p>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </p>
+    <h1>
+      배운 태그 정리
+    </h1>
+    <h2>
+      사이트 이름
+    </h2>
+    <p>
+      웹 브라우저 탭이나 창에 보이는 제목을 정할 수 있습니다. 참고로 페이지 내용이 아니라, 
+      페이지에 대한 정보이기 때문에 &lt;head&gt; 태그 안에 구분해서 넣습니다.
+    </p>
+    <p>
+      &lt;head&gt;
+        &lt;title&gt;윤동주 서시 - 한국 시 모음&lt;/title&gt;
+        ...
+      &lt;/head&gt;
+    </p>
+    <h2>
+      제목
+    </h2>
+    <p>
+      제목(Heading)은 제일 큰 것부터 작은 것까지 &lt;h1&gt;, &lt;h2&gt;, ... &lt;h6&gt; 태그를 사용할 수 있습니다.<br>
+      사이트 이름에 쓰는 &lt;title&gt; 태그와 헷갈리지 않도록 주의하세요!
+    </p>
+    <p>
+      &lt;h1&gt;서시&lt;/h1&gt;<br>
+      &lt;h2&gt;시인 윤동주&lt;/h2&gt;
+    </p>
+    <h2>
+      단락
+    </h2>
+    <p>
+      단락(Paragraph)은  &lt;p&gt;태그로 감싸면 되는데요.<br>
+      이때 코드에서 줄 바꿈은 화면에 나오지 않고 붙어서 보입니다.
+    </p>
+    <p>
+      &lt;p&gt;<br>
+        죽는 날까지 하늘을 우러러
+        한 점 부끄럼이 없기를,
+        잎새에 이는 바람에도
+        나는 괴로워했다.
+        별을 노래하는 마음으로
+        모든 죽어가는 것을 사랑해야지
+        그리고 나한테 주어진 길을
+        걸어가야겠다.<br>
+      &lt;/p&gt;<br>
+      &lt;p&gt;<br>
+        오늘 밤에도 별이 바람에 스치운다.<br>
+      &lt;/p&gt;<br>
+    </p>
+    <h2>
+      줄 바꿈
+    </h2>
+    <p>
+      HTML은 기본적으로 문장들을 이어서 보여 줍니다. 줄 바꿈(Break Line)은 
+      &lt;br&gt;이라는 태그를 사용합니다.<br> 
+      이때 줄 바꿈 태그 안에는 내용이 없으니까 시작 태그 하나만 &lt;br&gt;처럼 씁니다.
+    </p>
+    <p>
+      &lt;p&gt;<br>
+      죽는 날까지 하늘을 우러러&lt;br&gt;<br>
+      한 점 부끄럼이 없기를,&lt;br&gt;<br>
+      잎새에 이는 바람에도&lt;br&gt;<br>
+      나는 괴로워했다.&lt;br&gt;<br>
+      별을 노래하는 마음으로&lt;br&gt;<br>
+      모든 죽어가는 것을 사랑해야지&lt;br&gt;<br>
+      그리고 나한테 주어진 길을&lt;br&gt;<br>
+      걸어가야겠다.<br>
+      &lt;/p&gt;<br>
+      &lt;p&gt;<br>
+      오늘 밤에도 별이 바람에 스치운다.<br>
+      &lt;/p&gt;
+    </p>
+    <h2>
+      링크
+    </h2>
+    <p>
+      링크는 &lt;a&gt; 태그를 사용합니다. href 속성으로 이동할 주소나 경로를 적어 주면 됩니다.
+    </p>
+    <p>
+      &lt;a href="https://ko.wikipedia.org/wiki/%EC%84%9C%EC%8B%9C_(%EC%8B%9C)"&gt;<br>
+        위키 문서 보기<br>
+      &lt;/a&gt;
+    </p>
+    <h2>
+      이미지
+    </h2>
+    <p>
+      이미지(image)는 &lt;img&gt; 태그를 사용합니다.<br>
+      src 속성으로 이미지 파일의 주소나 경로를 적어 주면 됩니다.
+    </p>
+    <h3>
+      예시 1: 인터넷에 올라와 있는 사진
+    </h3>
+    <p>
+      &lt;img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Yun_Dong-ju.jpg"&gt;<br>
+      <br>
+      위에서 사용한 윤동주 이미지는 이미지는 Public domain 라이선스를 따릅니다.
+    </p>
+    <h3>
+      예시 2: 같은 폴더에 있는 yun-dong-ju.jpg 파일 사용하기
+    </h3>
+    <p>
+      &lt;img src="yun-dong-ju.jpg"&gt;
+    </p>
+    <h2>
+      영역 나누기
+    </h2>
+    <p>
+      &lt;div&gt; 태그로 여러 태그를 감싸거나,  &lt;span&gt; 태그로 텍스트 일부만 감쌀 수 있습니다.<br>
+      참고로 이렇게 영역을 나누는 건 나중에 CSS를 사용할 때 스타일을 적용하는 용도로 사용할 겁니다.
+    </p>
+    <p>
+      &lt;div&gt;<br>
+        &lt;h1&gt;서시&lt;/h1&gt;<br>
+        &lt;h2&gt;시인 &lt;span&gt;윤동주&lt;/span&gt;&lt;/h2&gt;<br>
+      &lt;/div&gt;<br>
+      &lt;div&gt;<br>
+        &lt;p&gt;<br>
+        죽는 날까지 하늘을 우러러&lt;br&gt;<br>
+        한 점 부끄럼이 없기를,&lt;br&gt;<br>
+        잎새에 이는 바람에도&lt;br&gt;<br>
+        나는 괴로워했다.&lt;br&gt;<br>
+        별을 노래하는 마음으로&lt;br&gt;<br>
+        모든 죽어가는 것을 사랑해야지&lt;br&gt;<br>
+        그리고 나한테 주어진 길을&lt;br&gt;<br>
+        걸어가야겠다.<br>
+        &lt;/p&gt;<br>
+        &lt;p&gt;<br>
+        오늘 밤에도 별이 바람에 스치운다.<br>
+        &lt;/p&gt;<br>
+      &lt;/div&gt;<br>
+    </p>
+  </body>
+</html>
