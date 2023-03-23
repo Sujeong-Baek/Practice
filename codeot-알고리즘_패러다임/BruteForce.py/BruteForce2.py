@@ -9,6 +9,8 @@
 # 참고로 태호는 이미 두 좌표 사이의 거리를 계산해 주는 함수 distance를 써 놨는데요, 
 # 함수 distance는 인풋으로 두 튜플을 받아서 그 사이의 직선 거리를 리턴합니다.
 
+# 제곱근 사용을 위한 sqrt 함수
+from math import sqrt
 
 # 두 매장의 직선 거리를 계산해 주는 함수
 def distance(store1, store2):
@@ -16,6 +18,15 @@ def distance(store1, store2):
 
 # 가장 가까운 두 매장을 찾아주는 함수
 def closest_pair(coordinates):
+    di,pair=distance(coordinates[0], coordinates[1]),[]
+    
+    for  i in range(len(coordinates)):
+        for j in range(len(coordinates)):
+            if i != j:
+                dis=distance(coordinates[i], coordinates[j])
+                if di>dis:
+                    di,pair=dis,[coordinates[i], coordinates[j]]
+    return pair
 
 
 
