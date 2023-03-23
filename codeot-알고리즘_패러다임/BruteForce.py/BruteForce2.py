@@ -18,12 +18,12 @@ def distance(store1, store2):
 
 # 가장 가까운 두 매장을 찾아주는 함수
 def closest_pair(coordinates):
-    min,pair=distance(coordinates[0], coordinates[1]),[]
+    pair=[coordinates[0], coordinates[1]]
     
     for  i in range(len(coordinates)-1):
         for j in range(i+1,len(coordinates)):
-            if min>distance(coordinates[i], coordinates[j]):
-                min,pair=distance(coordinates[i], coordinates[j]),[coordinates[i], coordinates[j]]
+            if distance(pair[0],pair[1])>distance(coordinates[i], coordinates[j]):
+                pair=[coordinates[i], coordinates[j]]
     return pair
 
 
