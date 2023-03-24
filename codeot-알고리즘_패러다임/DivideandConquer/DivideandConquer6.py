@@ -22,8 +22,10 @@ def partition(my_list, start, end):
     return bigger_index
 
 
-def quicksort(my_list, start, end):
+def quicksort(my_list, start=0, end=None):
     # 여기에 코드를 작성하세요
+    if end==None:
+        end=len(my_list)-1
     if start>=end:
         return
     pivot=partition(my_list, start, end)
