@@ -14,9 +14,9 @@ def merge(list1, list2):
             mergelist.append(list2[j])
             j+=1
     if i==len(list1):
-        mergelist+list2[j:] 
+        mergelist+=list2[j:] 
     else:
-        mergelist+list1[i:]
+        mergelist+=list1[i:]
     return mergelist
 
 
