@@ -22,7 +22,10 @@ def merge(list1, list2):
 # 합병 정렬
 def merge_sort(my_list):
     # 여기에 코드를 작성하세요
-
+    if len(my_list)==1:
+        return my_list
+    mid=len(my_list)//2
+    return merge(merge_sort(my_list[:mid]), merge_sort(my_list[mid:]))
  
 
 
