@@ -8,8 +8,6 @@ def swap_elements(my_list, index1, index2):
     my_list[index1],my_list[index2]=my_list[index2],my_list[index1]
 
 
-
-
 # 퀵 정렬에서 사용되는 partition 함수
 def partition(my_list, start, end):
     # 여기에 코드를 작성하세요
