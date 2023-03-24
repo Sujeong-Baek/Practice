@@ -23,7 +23,7 @@ def partition(my_list, start, end):
 
 # # 테스트 코드 1
 list1 = [4, 3, 6, 2, 7, 1, 5]
-pivot_index1 = partition(list1, 3, len(list1) - 1)
+pivot_index1 = partition(list1, 0, len(list1) - 1)
 print(list1)
 print(pivot_index1)
 
