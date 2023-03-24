@@ -12,18 +12,18 @@ def swap_elements(my_list, index1, index2):
 def partition(my_list, start, end):
     # 여기에 코드를 작성하세요
     pivot=my_list[end]
-    big=0
-    for i in range(end):
+    bigger_index=start
+    for i in range(start,end):
         if my_list[i]<pivot:
-            swap_elements(my_list,i,big)
-            big+=1
-    swap_elements(my_list,end,big)
-    return big
+            swap_elements(my_list,bigger_index,i)
+            bigger_index+=1
+    swap_elements(my_list,bigger_index,end)
+    return bigger_index
 
 
 # # 테스트 코드 1
 list1 = [4, 3, 6, 2, 7, 1, 5]
-pivot_index1 = partition(list1, 0, len(list1) - 1)
+pivot_index1 = partition(list1, 3, len(list1) - 1)
 print(list1)
 print(pivot_index1)
 
