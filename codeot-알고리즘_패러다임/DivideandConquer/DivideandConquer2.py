@@ -3,6 +3,24 @@
 
 def merge(list1, list2):
     # 여기에 코드를 작성하세요
+    mergelist=[]
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            mergelist.append(list1[0])
+            list1.remove(list1[0])
+        else:
+            mergelist.append(list2[0])
+            list2.remove(list2[0])
+    if list1:
+        mergelist.extend(list1) 
+    else:
+        mergelist.extend(list2)
+    return mergelist
+
+
+
+    
+    
     
 
 # 테스트 코드
