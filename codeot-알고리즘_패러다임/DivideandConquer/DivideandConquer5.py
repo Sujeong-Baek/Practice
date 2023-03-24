@@ -23,7 +23,12 @@ def partition(my_list, start, end):
 
 def quicksort(my_list, start, end):
     # 여기에 코드를 작성하세요
-
+    if start>=end:
+        return
+    start_index=partition(my_list, start, end)
+    quicksort(my_list,start_index+1, end)
+    quicksort(my_list,start, start_index-1)
+    return
 
 # 테스트 코드 1
 list1 = [1, 3, 5, 7, 9, 11, 13, 11]
