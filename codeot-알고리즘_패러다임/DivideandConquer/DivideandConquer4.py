@@ -5,6 +5,7 @@
 # 두 요소의 위치를 바꿔주는 helper function
 def swap_elements(my_list, index1, index2):
     # 여기에 코드를 작성하세요
+    my_list[index1],my_list[index2]=my_list[index2],my_list[index1]
 
 
 
@@ -12,6 +13,15 @@ def swap_elements(my_list, index1, index2):
 # 퀵 정렬에서 사용되는 partition 함수
 def partition(my_list, start, end):
     # 여기에 코드를 작성하세요
+    pivot=my_list[end]
+    big=0
+    for i in range(end):
+        if my_list[i]<pivot:
+            swap_elements(my_list,i,big)
+            big+=1
+    swap_elements(my_list,end,big)
+    return big
+
 
 # # 테스트 코드 1
 list1 = [4, 3, 6, 2, 7, 1, 5]
