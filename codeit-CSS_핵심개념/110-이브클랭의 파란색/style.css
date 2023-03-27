@@ -1,0 +1,43 @@
+html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .artist {
+    font-family: Rajdhani;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin: 0;
+  }
+  
+  .title {
+    color: #747780;
+    font-weight: 400;
+    margin: 0 0 24px 0;
+  }
+  
+  .ikb {
+    height: 320px;
+    width: 320px;
+  }
+  
+  .info {
+    font-size: 24px;
+  }
+  
+  .location {
+    font-size: 24px;
+    margin: 8px 0;
+  }
+  
+  .date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  
