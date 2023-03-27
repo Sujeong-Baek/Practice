@@ -6,7 +6,9 @@ body {
   
   .container {
     width: 400px;
-    background-color: #7352d0;
+    background-image: 
+        linear-gradient(rgba(159, 84, 209, 0.2),rgba(115, 82, 208, 0.6)),
+        url('bg.png');
     color: #ffffff;
     margin: 0 auto;
   }
