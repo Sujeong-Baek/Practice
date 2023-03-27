@@ -26,6 +26,8 @@ html {
   
   .artworks {
     margin: 0 -48px;
+    white-space: nowrap;
+    overflow: scroll;
   }
   
   .artwork {
