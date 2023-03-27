@@ -6,7 +6,14 @@
 # max_product는 left_cards에서 카드 하나와 right_cards에서 카드 하나를 뽑아서 곱했을 때 그 값이 최대가 되는 값을 리턴합니다.
 
 def max_product(left_cards, right_cards):
-    # 여기에 코드를 작성하세요
+    answer=0
+    for left in left_cards:
+        for right in right_cards:
+            num=left*right
+            if answer<num:
+                answer=num
+    return answer
+            
 
 # 테스트 코드
 print(max_product([1, 6, 5], [4, 2, 3]))
