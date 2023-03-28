@@ -3,6 +3,11 @@
 # 공간 복잡도 O(1)로 fib_optimized 함수를 작성하세요.
 def fib_optimized(n):
     # 여기에 코드를 작성하세요
+    current=1
+    previous=0
+    for _ in range(2,n+1):
+        current, previous=current+previous, current
+    return current
 
 
 # 테스트 코드
