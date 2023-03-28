@@ -23,7 +23,17 @@
 
 def max_profit(price_list, count):
     # 여기에 코드를 작성하세요
+    max_profit_list=[0]
+    for i in range(1,count+1):
+        if i <len(price_list):
+            num=price_list[i]
+        else:
+            num=0
 
+        for j in range(1,i//2+1):
+            num=max(max_profit_list[i-j]+max_profit_list[j],num)
+        max_profit_list.append(num)
+    return max_profit_list[count]
 
 # 테스트 코드
 print(max_profit([0, 200, 600, 900, 1200, 2000], 5))
