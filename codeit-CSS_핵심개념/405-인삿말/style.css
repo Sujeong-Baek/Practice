@@ -19,6 +19,7 @@ body {
     width: 180px;
     border-radius: 50%;
     margin: 24px;
+    float: right
   }
   
   .director {
