@@ -24,8 +24,21 @@
 
 def max_profit_memo(price_list, count, cache):
     # 여기에 코드를 작성하세요
-
+    if count==1:
+        return count
     
+    if count in cache:
+        return cache[count]
+    
+    if count<len(price_list):
+        cache[count]=price_list[count]
+    else:
+        cache[count]=0
+
+    for i in range(1,count//2+1):
+        cache[count]=max(max_profit_memo(price_list, count-i, cache)+max_profit_memo(price_list, i, cache),cache[count])
+    return cache[count]
+
 def max_profit(price_list, count):
     max_profit_cache = {}
 
