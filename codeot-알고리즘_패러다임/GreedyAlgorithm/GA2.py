@@ -5,6 +5,10 @@
 
 def max_product(card_lists):
     # 여기에 코드를 작성하세요
+    product=1
+    for card_list in card_lists:
+        product*=max(card_list)
+    return product
 
 
 # 테스트 코드
