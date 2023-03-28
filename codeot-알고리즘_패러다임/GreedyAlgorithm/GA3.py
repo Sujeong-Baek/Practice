@@ -12,7 +12,12 @@
 
 def min_fee(pages_to_print):
     # 여기에 코드를 작성하세요
-
+    sorted_list=sorted(pages_to_print)
+    total_fee=0
+    for i in range(len(pages_to_print)):
+        total_fee+=sorted_list[i]*(len(pages_to_print)-i)
+    return total_fee
+    
 
 # 테스트 코드
 print(min_fee([6, 11, 4, 1]))
