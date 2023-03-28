@@ -6,6 +6,12 @@
 
 def min_coin_count(value, coin_list):
     # 여기에 코드를 작성하세요
+    sorted_list=sorted(coin_list, reverse=True)
+    count=0
+    for coin in sorted_list:
+        count+=value//coin
+        value%=coin
+    return count
 
 # 테스트 코드
 default_coin_list = [100, 500, 10, 50]
