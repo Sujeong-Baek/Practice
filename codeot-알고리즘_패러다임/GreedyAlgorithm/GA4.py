@@ -9,6 +9,12 @@
 
 def course_selection(course_list):
     # 여기에 코드를 작성하세요
+    sorted_list=sorted(course_list, key=lambda x:x[1])
+    my_list=[sorted_list[0]]
+    for course in sorted_list:
+        if course[0] > my_list[-1][1]:
+            my_list.append(course)
+    return my_list
 
 
 # 테스트 코드
