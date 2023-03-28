@@ -56,5 +56,8 @@ a.see-more {
     text-decoration: none;
 }
 
+a.see-more:hover {
+    background: #524cad;
+}
 
   
