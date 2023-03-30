@@ -11,8 +11,6 @@ def sublist_max(profits):
             total=max(sum(profits[i:j]),total)
     return total
 
-
-
 # 테스트 코드
 print(sublist_max([4, 3, 8, -2, -5, -3, -5, -3]))
 print(sublist_max([2, 3, 1, -1, -2, 5, -1, -1]))
