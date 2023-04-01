@@ -1,0 +1,28 @@
+.gnb {
+  border-bottom: 1px solid #dddddd;
+}
+
+#logo {
+  height: 20px;
+}
+
+ul.menu {
+  display: inline-block;
+  /* 여기에 코드를 작성하세요 */
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.menu > li {
+  margin: 16px;
+  /* 여기에 코드를 작성하세요 */
+  display:inline-flex;
+  border: 2px solid #dddddd;
+  border-radius: 40px;
+  padding: 8px;
+}
+
+.gnb,
+.main {
+  padding: 16px;
+}
