@@ -5,7 +5,11 @@
 # Brute Force 방법을 이용해서 이 문제를 한번 풀어 봅시다!
 def sublist_max(profits):
     # 여기에 코드를 작성하세요
-
+    total=profits[0]
+    for i in range(len(profits)):
+        for j in range(i+1,len(profits)+1):
+            total=max(sum(profits[i:j]),total)
+    return total
 
 # 테스트 코드
 print(sublist_max([4, 3, 8, -2, -5, -3, -5, -3]))
