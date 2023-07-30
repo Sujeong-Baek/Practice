@@ -7,7 +7,7 @@ def solution():
     for _ in range(N):
         n1, n2 =  map(int, sys.stdin.readline().split())
         answer.append(data[(n1%10)-1][(n2%len(data[(n1%10)-1]))-1])
-    
+
     for a in answer:
         print(a)
 
