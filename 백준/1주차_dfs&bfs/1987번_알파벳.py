@@ -34,31 +34,47 @@ solution()
 
 
 
-def solution2():
-    R, C = map(int, input().split())
-    MAP = [list(map(lambda x : ord(x)-65, input())) for _ in range(R)]
-    alphabet = [0]*26
-    visited = [[0]*C for _ in range(R)]
-    count = 0
-    print(dfs(MAP, R, C, 0, 0, alphabet, count, visited))
 
-    return
-
-def dfs(MAP, R, C, r, c, alphabet, count, visited):
-    count+=1
-    count_list = [count]
-    visited[r][c]=1
-    alphabet[MAP[r][c]] = 1
-
+import sys
+input=sys.stdin.readline
+def dfs(r, c, count):
+    global mx
+    mx = max(mx,count)
     for dr, dc in [[0,1], [0,-1], [1,0], [-1,0]]:
         nr = dr + r
         nc = dc + c
+        if (0<=nr<R) and (0<=nc<C) and (alpha_check[int(ord(graph[nr][nc]))-65]==False):
+            alpha_check[int(ord(graph[nr][nc]))-65]=True
+            dfs(nr, nc, count+1)
+            alpha_check[int(ord(graph[nr][nc]))-65]=False
+R, C=map(int, input().split())
+graph=[]
+for _ in range(R):
+    graph.append(list(input().strip()))
+alpha_check=[False]*26
+mx=1
+alpha_check[int(ord(graph[0][0]))-65]=True
+dfs(0, 0, 1)
+print(mx)
 
-        if 0 <= nr < R and 0 <= nc < C and alphabet[MAP[nr][nc]] == 0 and visited[nr][nc] == 0:
-            count_list.append(dfs(MAP, R, C, nr, nc, alphabet, count, visited))
-    visited[r][c]=0
-    alphabet[MAP[r][c]] = 0 
 
-    return max(count_list)
 
-solution2()
+
+dr = [-1, 1, 0, 0]
+dc = [0, 0, -1, 1]
+def dfs(r, c, path):
+    global result
+    result = max(result, len(path))
+
+    for i in range(4):
+        nr, nc = r + dr[i], c + dc[i]
+        if 0 <= nr < R and 0 <= nc < C and board[nr][nc] not in path:
+            dfs(nr, nc, path + board[nr][nc])
+
+R, C = map(int, input().split())
+board = []
+for _ in range(R):
+    board.append(list(input().strip()))
+result = 0
+dfs(0, 0, board[0][0])
+print(result)
