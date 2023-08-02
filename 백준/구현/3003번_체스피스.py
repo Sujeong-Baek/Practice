@@ -10,4 +10,3 @@ def solution():
         print(a, end=' ')
     print(answer[-1])
     
-solution()
