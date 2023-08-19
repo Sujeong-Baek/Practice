@@ -18,6 +18,7 @@ def solution():
                 count[i] = count[i-1] + count [i-2] + count[i-3]
             answer.append(count[i])
 
-    print(answer)
+    for a in answer:
+        print(a)
 
 solution()
