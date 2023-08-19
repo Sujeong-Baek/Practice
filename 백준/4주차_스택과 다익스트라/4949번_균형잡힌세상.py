@@ -18,13 +18,13 @@ def search_yes_no(s):
     for el in s:
         if el in '([':
             stack.append(el)
-        elif stack and el in ')]':
-            if match[el] == stack[-1]:
+
+        elif el in ')]':
+            if stack and match[el] == stack[-1]:
                 stack.pop()
             else:
                 return 'no'
-        elif not stack and el in ')]':
-            return 'no'
+            
     return 'no' if stack else 'yes'
 
 solution()
