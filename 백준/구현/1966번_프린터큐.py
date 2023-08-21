@@ -25,8 +25,4 @@ def solution():
 
     for a in answer:
         print(a)
-
-        
-
-
 solution()
