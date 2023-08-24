@@ -2,14 +2,15 @@
 def solution():
     N = int(input())
     count =[float('inf')] * (N+1)
-    count[1] = 0
-    for num in range(1, N+1):
-        if num+1 <= N:
-            count[num+1] = min(count[num+1], count[num]+1)
-        if num*2 <= N:
-            count[num*2] = min(count[num*2], count[num]+1) 
-        if num*3 <= N: 
-            count[num*3] = min(count[num*3], count[num]+1)
-    print(count[-1])
+    count[N] = 0
+    for i in range(N, 0, -1):
+        if i%3 == 0:
+            count[i//3] = min(count[i//3], count[i] + 1)
+        if i%2 == 0:
+            count[i//2] = min(count[i//2], count[i] + 1)
+        if i - 1 > 0:
+            count[i-1] = min(count[i-1], count[i]+1)
 
+    print(count[1])
+            
 solution()
