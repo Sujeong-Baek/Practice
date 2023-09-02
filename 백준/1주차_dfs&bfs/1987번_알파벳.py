@@ -1,4 +1,6 @@
 # https://www.acmicpc.net/problem/1987
+
+#최단거리가 아닌 모든 경로를 탐색해야하는 것이므로 bfs가 아닌 dfs로 푼다.
 from collections import deque
 def solution():
     R, C = map(int, input().split())

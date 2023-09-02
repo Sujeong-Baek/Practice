@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/problem/
+# https://www.acmicpc.net/problem/2468
 from collections import deque
 def solution():
     N = int(input())
@@ -17,10 +17,8 @@ def solution():
 
         if answer < count:
             answer = count
-
     print(answer)                    
-
-
+    
 def bfs(Map, N, R, C, h):
     que= deque()
     que.append((R,C))

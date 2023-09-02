@@ -10,12 +10,11 @@ def solution():
     que.append((0, 0, False, 1))
 
     costs = [[[float('inf')]*2 for _ in range(C)] for _ in range(R)]
-    costs[0][0] = [1,1]
+    costs[0][0] = [1,1,1,1]
 
 
     while que:
         r, c, wall, count = que.popleft()
-       
 
         if r == R-1 and c == C-1:
             print(min(costs[r][c]))
