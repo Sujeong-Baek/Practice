@@ -3,6 +3,7 @@ def solution():
     A = int(input())
     Anums = list(map(int, input().split()))
     Anums.sort()
+    
     M = int(input())
     Mnums = list(map(int, input().split()))
     answer = []

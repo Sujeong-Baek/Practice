@@ -1,4 +1,4 @@
-# https://khu98.tistory.com/258
+# https://www.acmicpc.net/problem/6209
 def solution():
     D, N, M = map(int, input().split())
     island = [int(input()) for _ in range(N)]
@@ -6,8 +6,10 @@ def solution():
     answer = 0
     left = 0
     right = D
+
     while left<=right:
         mid = (left+right)//2
+
         M_count = 0
         now = 0
         min_dis = D
