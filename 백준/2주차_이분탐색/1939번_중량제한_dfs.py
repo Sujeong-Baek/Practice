@@ -6,7 +6,7 @@ def solution():
     input = sys.stdin.readline
     N, M = map(int, input().split())
     graph = defaultdict(list)
-    left = 0
+    left = 1
     right = 0
     answer = 0
 
@@ -33,10 +33,8 @@ def solution():
 
 def dfs(graph, node, mid, visited):
     visited[node] = True
-    prev = None
     for neighber, weight in sorted(graph[node], key = lambda x: (x[0], -x[1])):
-        if prev != neighber and weight >= mid and visited[neighber]is False:
+        if weight >= mid and visited[neighber]is False:
             dfs(graph, neighber, mid, visited)
-            prev = neighber
 
 solution()
