@@ -22,7 +22,8 @@ def solution():
         else:
             right = mid -1
             answer = min(mid, answer)
-
+        
+        print(left, right, mid, group)
 
     total = balls[0]
     groups = [1]*G
