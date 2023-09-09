@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/1298
 from collections import deque
 
 def solution():

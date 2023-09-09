@@ -1,5 +1,4 @@
 # https://www.acmicpc.net/problem/1987
-
 #최단거리가 아닌 모든 경로를 탐색해야하는 것이므로 bfs가 아닌 dfs로 푼다.
 from collections import deque
 def solution():
@@ -34,34 +33,7 @@ def solution():
 
 solution()
 
-
-
-
-import sys
-input=sys.stdin.readline
-def dfs(r, c, count):
-    global mx
-    mx = max(mx,count)
-    for dr, dc in [[0,1], [0,-1], [1,0], [-1,0]]:
-        nr = dr + r
-        nc = dc + c
-        if (0<=nr<R) and (0<=nc<C) and (alpha_check[int(ord(graph[nr][nc]))-65]==False):
-            alpha_check[int(ord(graph[nr][nc]))-65]=True
-            dfs(nr, nc, count+1)
-            alpha_check[int(ord(graph[nr][nc]))-65]=False
-R, C=map(int, input().split())
-graph=[]
-for _ in range(R):
-    graph.append(list(input().strip()))
-alpha_check=[False]*26
-mx=1
-alpha_check[int(ord(graph[0][0]))-65]=True
-dfs(0, 0, 1)
-print(mx)
-
-
-
-
+#통과 코드
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
 def dfs(r, c, path):

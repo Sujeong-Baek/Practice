@@ -14,9 +14,7 @@ def solution():
                 if temp_MAP[r][c]>h:
                     count += 1
                     bfs(temp_MAP, N, r, c, h)
-
-        if answer < count:
-            answer = count
+        answer = max(answer, count)
     print(answer)                    
     
 def bfs(Map, N, R, C, h):
